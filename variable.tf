@@ -1,3 +1,0 @@
-variable "rh_name" {
-  
-}
