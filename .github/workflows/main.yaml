@@ -1,6 +1,7 @@
 name: Test Runner
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -14,7 +15,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Verify Runner
+        shell: cmd
         run: |
-          echo "Runner is Working"
+          echo Runner is Working
           hostname
-          pwd
+          dir
+
+      - name: Show Date
+        shell: cmd
+        run: date /t && time /t
